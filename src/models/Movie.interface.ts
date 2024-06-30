@@ -1,26 +1,23 @@
 export interface Movie {
+  adult: boolean;
+  backdrop_path: string;
+  genre_ids: number[];
+  id: number;
+  original_language: string;
+  original_title: string;
+  overview: string;
+  popularity: number;
+  poster_path: string;
+  release_date: string;
   title: string;
-  rated: string;
-  year: string;
-  released: string;
-  runtime: string;
-  director: string;
-  writer: string;
-  actors: string;
-  plot: string;
-  // language: string;
-  country: string;
-  awards: string;
-  poster: string;
-  ratings: Rating[];
-  types: string;
-  box_office: string;
-  genre: string;
-  imdbVotes: string;
-  imdbID: string;
+  video: boolean;
+  vote_average: number;
+  vote_count: number;
 }
 
-export interface Rating {
-  source: string;
-  values: string;
+export interface MovieResponse {
+  page: number;
+  results: Movie[];
+  total_pages: number;
+  total_results: number;
 }

@@ -1,18 +1,21 @@
 import { Card, CardContent, Typography } from "@mui/material";
-import { movie } from "../mockMovie";
-import FilmInfo from "./FilmInfo";
+import { useNavigate } from "react-router-dom";
+import { Movie } from "../../../models/Movie.interface";
 import "./MovieCard.css";
+import MovieInfo from "./MovieInfo";
 
-const MovieCard = () => {
+const MovieCard = ({ movie }: { movie: Movie }) => {
+  const navigate = useNavigate();
+
   return (
-    <Card className="card">
+    <Card className="card" onClick={() => navigate(`${movie.id}`, {})}>
       <Typography variant="h4" component="div">
         {movie.title}
       </Typography>
       <CardContent className="content">
-        <FilmInfo />
+        <MovieInfo movie={movie} />
         <Typography className="description" variant="h6" component="div">
-          {movie.plot}
+          {movie.overview}
         </Typography>
       </CardContent>
     </Card>
