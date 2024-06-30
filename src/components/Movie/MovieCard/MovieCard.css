@@ -1,0 +1,31 @@
+.card {
+  width: 42dvw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.poster {
+  width: 200px;
+  height: 400px;
+  border: 10px solid red;
+}
+
+.info {
+  display: flex;
+  gap: 18px;
+}
+
+.film-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+.description {
+  text-align: left;
+}
